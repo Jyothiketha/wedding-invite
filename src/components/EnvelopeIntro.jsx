@@ -4,14 +4,23 @@ import { useEffect, useState } from "react";
 export default function EnvelopeIntro({ onComplete }) {
   const [opened, setOpened] = useState(false);
 
+  useEffect(() => {
+    const alreadyInvited = sessionStorage.getItem("invited");
+
+    if (alreadyInvited) {
+      onComplete();
+    }
+  }, [onComplete]);
+
   const handleTap = () => {
     if (opened) return;
 
     setOpened(true);
 
     setTimeout(() => {
+      sessionStorage.setItem("invited", "true");
       onComplete();
-    }, 1200);
+    }, 1500);
   };
 
   return (
@@ -32,14 +41,13 @@ export default function EnvelopeIntro({ onComplete }) {
       }}
     >
       <motion.img
-        src="/envelope.png"
+        src={`${import.meta.env.BASE_URL}envelope.png`}
         alt="Wedding invitation envelope"
         animate={
           opened
             ? {
                 y: 80,
                 opacity: 0,
-                scale: 1.05,
               }
             : {
                 y: [0, -8, 0],
@@ -49,7 +57,6 @@ export default function EnvelopeIntro({ onComplete }) {
           opened
             ? {
                 duration: 0.8,
-                ease: "easeInOut",
               }
             : {
                 duration: 2,

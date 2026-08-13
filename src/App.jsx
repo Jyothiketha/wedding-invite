@@ -1,19 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import EnvelopeIntro from "./components/EnvelopeIntro";
 
 function App() {
-  // =====================================================
-  // ENVELOPE STATE
-  // =====================================================
-
-  const [showInvitation, setShowInvitation] = useState(false);
-
-
-  // =====================================================
-  // COUNTDOWN
-  // =====================================================
-
   const weddingDate = new Date("2026-08-26T22:16:00");
 
   const [timeLeft, setTimeLeft] = useState({
@@ -22,7 +10,6 @@ function App() {
     minutes: 0,
     seconds: 0,
   });
-
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -36,7 +23,6 @@ function App() {
           minutes: 0,
           seconds: 0,
         });
-
         return;
       }
 
@@ -66,18 +52,10 @@ function App() {
 
     updateCountdown();
 
-    const timer = setInterval(
-      updateCountdown,
-      1000
-    );
+    const timer = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(timer);
   }, []);
-
-
-  // =====================================================
-  // SCROLL TO EVENTS
-  // =====================================================
 
   const scrollToEvents = () => {
     document
@@ -87,27 +65,8 @@ function App() {
       });
   };
 
-
-  // =====================================================
-  // SHOW ENVELOPE FIRST
-  // =====================================================
-
-  if (!showInvitation) {
-    return (
-      <EnvelopeIntro
-        onComplete={() => setShowInvitation(true)}
-      />
-    );
-  }
-
-
-  // =====================================================
-  // WEDDING INVITATION
-  // =====================================================
-
   return (
     <div className="wedding-page">
-
 
       {/* =====================================================
           HERO SECTION
@@ -116,26 +75,19 @@ function App() {
       <section className="hero-section">
 
         {/* COUPLE IMAGE */}
-
         <img
-          src="/couple.png"
+          src={`${import.meta.env.BASE_URL}couple.png`}
           alt="Manikanta and Chandrakala"
           className="hero-image"
         />
 
-
         {/* DARK OVERLAY */}
-
         <div className="hero-overlay"></div>
 
-
         {/* HERO CONTENT */}
-
         <div className="hero-content">
 
-
           {/* TOP DECORATION */}
-
           <div className="hero-decoration">
 
             <span className="decor-line"></span>
@@ -156,25 +108,19 @@ function App() {
 
           </div>
 
-
           {/* SMALL HEADING */}
-
           <p className="eyebrow">
             WE ARE GETTING MARRIED
           </p>
 
-
           {/* NAMES */}
-
           <div className="name-block">
 
             <h1>
               Manikanta
             </h1>
 
-
             {/* AMPERSAND */}
-
             <div className="ampersand-row">
 
               <span className="side-symbol">
@@ -191,16 +137,13 @@ function App() {
 
             </div>
 
-
             <h1>
               Chandrakala
             </h1>
 
           </div>
 
-
           {/* GOLD LINE */}
-
           <div className="gold-line">
 
             <span></span>
@@ -213,16 +156,12 @@ function App() {
 
           </div>
 
-
           {/* WEDDING DATE */}
-
           <p className="wedding-date">
             26 · AUGUST · 2026
           </p>
 
-
           {/* SCROLL BUTTON */}
-
           <button
             className="scroll-button"
             onClick={scrollToEvents}
@@ -253,21 +192,17 @@ function App() {
           THE COUNTDOWN BEGINS
         </p>
 
-
         <h2>
           Until
           <br />
           Forever
         </h2>
 
-
         <div className="small-gold-line"></div>
-
 
         <div className="countdown">
 
           <div className="count-item">
-
             <span>
               {timeLeft.days}
             </span>
@@ -275,12 +210,9 @@ function App() {
             <small>
               DAYS
             </small>
-
           </div>
 
-
           <div className="count-item">
-
             <span>
               {timeLeft.hours}
             </span>
@@ -288,12 +220,9 @@ function App() {
             <small>
               HOURS
             </small>
-
           </div>
 
-
           <div className="count-item">
-
             <span>
               {timeLeft.minutes}
             </span>
@@ -301,12 +230,9 @@ function App() {
             <small>
               MINUTES
             </small>
-
           </div>
 
-
           <div className="count-item">
-
             <span>
               {timeLeft.seconds}
             </span>
@@ -314,7 +240,6 @@ function App() {
             <small>
               SECONDS
             </small>
-
           </div>
 
         </div>
@@ -335,18 +260,14 @@ function App() {
           JOIN US IN CELEBRATION
         </p>
 
-
         <h2>
           Wedding Celebrations
         </h2>
 
-
         <div className="small-gold-line"></div>
 
 
-        {/* =====================================================
-            GROOM MAKEOVER
-        ===================================================== */}
+        {/* GROOM MAKEOVER */}
 
         <div className="event-card">
 
@@ -354,16 +275,13 @@ function App() {
             23 · AUGUST · 2026
           </p>
 
-
           <h3>
             Groom Makeover
           </h3>
 
-
           <p className="event-time">
             Throughout the day
           </p>
-
 
           <p className="event-venue">
             📍 Pedapalla
@@ -372,9 +290,7 @@ function App() {
         </div>
 
 
-        {/* =====================================================
-            SANGEETH
-        ===================================================== */}
+        {/* SANGEETH */}
 
         <div className="event-card">
 
@@ -382,16 +298,13 @@ function App() {
             24 · AUGUST · 2026
           </p>
 
-
           <h3>
             Sangeeth
           </h3>
 
-
           <p className="event-time">
             Evening
           </p>
-
 
           <p className="event-venue">
             📍 Pedapalla
@@ -400,9 +313,7 @@ function App() {
         </div>
 
 
-        {/* =====================================================
-            BONALU & LUNCH
-        ===================================================== */}
+        {/* BONALU */}
 
         <div className="event-card">
 
@@ -410,16 +321,13 @@ function App() {
             25 · AUGUST · 2026
           </p>
 
-
           <h3>
             Bonalu &amp; Lunch
           </h3>
 
-
           <p className="event-time">
             12:00 PM
           </p>
-
 
           <p className="event-venue">
             📍 Near SBPBK Function Hall,
@@ -430,9 +338,7 @@ function App() {
         </div>
 
 
-        {/* =====================================================
-            MARRIAGE
-        ===================================================== */}
+        {/* MARRIAGE */}
 
         <div className="event-card wedding-card">
 
@@ -440,16 +346,13 @@ function App() {
             26 · AUGUST · 2026
           </p>
 
-
           <h3>
             Marriage
           </h3>
 
-
           <p className="event-time">
             10:16 PM
           </p>
-
 
           <p className="event-venue">
             📍 Sri Venkateswara Swamy Temple
@@ -460,9 +363,7 @@ function App() {
         </div>
 
 
-        {/* =====================================================
-            RECEPTION
-        ===================================================== */}
+        {/* RECEPTION */}
 
         <div className="event-card">
 
@@ -470,16 +371,13 @@ function App() {
             30 · AUGUST · 2026
           </p>
 
-
           <h3>
             Reception
           </h3>
 
-
           <p className="event-time">
             12:00 PM onwards
           </p>
-
 
           <p className="event-venue">
             📍 Rajavomangi Mandalam,
@@ -502,24 +400,20 @@ function App() {
           THANK YOU
         </p>
 
-
         <h2>
           We can't wait
           <br />
           to celebrate with you
         </h2>
 
-
         <p className="thank-you-text">
           Your presence and blessings mean the world to us
           as we begin this beautiful journey together.
         </p>
 
-
         <div className="thank-you-names">
           Manikanta &amp; Chandrakala
         </div>
-
 
         <div className="heart">
           ♥
