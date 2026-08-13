@@ -1,0 +1,1920 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #e9e3d8;
+
+  color: #2c1710;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.wedding-page {
+  width: 100%;
+
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  background: #faf6ed;
+
+  overflow-x: hidden;
+
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+
+  height: 760px;
+
+  overflow: hidden;
+
+  background: #1d100b;
+}
+
+
+/* =========================================================
+   COUPLE IMAGE
+========================================================= */
+
+.hero-image {
+  position: absolute;
+
+  width: 118%;
+
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  left: -9%;
+
+  top: 0;
+
+  display: block;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(18, 10, 6, 0.52) 0%,
+      rgba(18, 10, 6, 0.38) 42%,
+      rgba(18, 10, 6, 0.48) 75%,
+      rgba(18, 10, 6, 0.58) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 9%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  max-width: 560px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #fff2d2;
+}
+
+
+/* =========================================================
+   TOP DECORATION
+========================================================= */
+
+.hero-decoration {
+  width: 58%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: #dca329;
+}
+
+.decor-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dca329;
+
+  opacity: 0.9;
+}
+
+.decor-symbol {
+  font-size: 16px;
+
+  line-height: 1;
+
+  color: #dca329;
+}
+
+.decor-star {
+  font-size: 23px;
+
+  line-height: 1;
+
+  color: #e3a92e;
+}
+
+
+/* =========================================================
+   WE ARE GETTING MARRIED
+========================================================= */
+
+.eyebrow {
+  margin: 0;
+
+  padding: 0;
+
+  width: 100%;
+
+  color: #dda42c;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  line-height: 1.4;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   NAMES
+========================================================= */
+
+.name-block {
+  width: 100%;
+
+  margin-top: 19px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   NAME TEXT
+========================================================= */
+
+.name-block h1 {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: #fff1d2;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(48px, 9vw, 67px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -1.5px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 3px 9px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   AMPERSAND ROW
+========================================================= */
+
+.ampersand-row {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 14px 0;
+
+  text-align: center;
+
+  color: #dca229;
+}
+
+.side-symbol {
+  font-size: 15px;
+
+  color: #dca229;
+
+  line-height: 1;
+}
+
+.ampersand {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 29px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #dca229;
+}
+
+
+/* =========================================================
+   GOLD LINE UNDER NAMES
+========================================================= */
+
+.gold-line {
+  width: 52%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.gold-line span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dca229;
+
+  opacity: 0.85;
+}
+
+.gold-diamond {
+  color: #dca229;
+
+  font-size: 7px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.wedding-date {
+  width: 100%;
+
+  margin: 12px 0 0;
+
+  color: #dfa62f;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 3.5px;
+
+  line-height: 1.5;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   SCROLL BUTTON
+========================================================= */
+
+.scroll-button {
+  position: absolute;
+
+  top: 625px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: max-content;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #fff0d0;
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-button:hover {
+  color: #dfa52c;
+}
+
+.arrow {
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.countdown-section {
+  min-height: 560px;
+
+  padding: 110px 30px 100px;
+
+  background: #faf6ed;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.section-eyebrow {
+  margin: 0 0 14px;
+
+  color: #c9932d;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.countdown-section h2 {
+  margin: 0;
+
+  color: #321a12;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 62px;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  text-align: center;
+}
+
+.small-gold-line {
+  width: 70px;
+
+  height: 1px;
+
+  margin: 24px auto 38px;
+
+  background: #d5a047;
+}
+
+
+/* =========================================================
+   COUNTDOWN NUMBERS
+========================================================= */
+
+.countdown {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+  align-items: start;
+
+  justify-content: center;
+}
+
+.count-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+}
+
+.count-item span {
+  color: #321a12;
+
+  font-size: 38px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.count-item small {
+  margin-top: 9px;
+
+  color: #b9872d;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.events-section {
+  padding: 90px 34px 100px;
+
+  background: #f8f2e7;
+
+  text-align: center;
+}
+
+.events-section h2 {
+  margin: 0;
+
+  color: #321a12;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 51px;
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+========================================================= */
+
+.event-card {
+  width: 100%;
+
+  min-height: 330px;
+
+  margin: 32px auto;
+
+  padding: 52px 25px;
+
+  border: 1px solid #e3cfa8;
+
+  background: rgba(255, 252, 245, 0.45);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.event-card:first-of-type {
+  margin-top: 40px;
+}
+
+.event-number {
+  margin: 0 0 24px;
+
+  color: #c8942d;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+}
+
+.event-date {
+  margin: 0 0 22px;
+
+  color: #c8942d;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  line-height: 1.5;
+}
+
+.event-card h3 {
+  margin: 0;
+
+  color: #321a12;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+.event-time {
+  margin: 25px 0 18px;
+
+  color: #321a12;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.event-venue {
+  margin: 0;
+
+  color: #58372a;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   WEDDING CARD
+========================================================= */
+
+.wedding-card {
+  background: #2d1710;
+
+  border-color: #2d1710;
+
+  color: #fff4dc;
+}
+
+.wedding-card .event-number,
+.wedding-card .event-date {
+  color: #dba12d;
+}
+
+.wedding-card h3,
+.wedding-card .event-time,
+.wedding-card .event-venue {
+  color: #fff1d4;
+}
+
+
+/* =========================================================
+   THANK YOU
+========================================================= */
+
+.thank-you-section {
+  min-height: 560px;
+
+  padding: 100px 35px;
+
+  background: #fffaf0;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.thank-you-section h2 {
+  margin: 0;
+
+  color: #321a12;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  text-align: center;
+}
+
+.thank-you-text {
+  max-width: 420px;
+
+  margin: 28px auto 25px;
+
+  color: #654538;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+.thank-you-names {
+  color: #321a12;
+
+  font-size: 19px;
+
+  letter-spacing: 1px;
+}
+
+.heart {
+  margin-top: 25px;
+
+  color: #c9932d;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .wedding-page {
+    width: 100%;
+
+    max-width: 560px;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
+  .hero-section {
+    height: 760px;
+  }
+
+
+  .hero-image {
+    width: 118%;
+
+    height: 100%;
+
+    left: -9%;
+
+    top: 0;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  .hero-content {
+    top: 8%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    padding: 0 15px;
+  }
+
+
+  .hero-decoration {
+    width: 60%;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .decor-symbol {
+    font-size: 14px;
+  }
+
+
+  .decor-star {
+    font-size: 20px;
+  }
+
+
+  .eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin: 0;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     NAMES
+     ------------------------------------------------------- */
+
+  .name-block {
+    width: 100%;
+
+    margin-top: 17px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+
+  .name-block h1 {
+    width: 100%;
+
+    font-size: 49px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    text-align: center;
+
+    white-space: nowrap;
+  }
+
+
+  .ampersand-row {
+    width: 100%;
+
+    margin: 11px 0;
+
+    gap: 10px;
+
+    justify-content: center;
+  }
+
+
+  .side-symbol {
+    font-size: 13px;
+  }
+
+
+  .ampersand {
+    font-size: 26px;
+  }
+
+
+  /* -------------------------------------------------------
+     DATE
+     ------------------------------------------------------- */
+
+  .gold-line {
+    width: 52%;
+
+    margin-top: 18px;
+  }
+
+
+  .wedding-date {
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     SCROLL
+     ------------------------------------------------------- */
+
+  .scroll-button {
+    top: auto;
+
+    bottom: 27px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .arrow {
+    font-size: 23px;
+  }
+
+
+  /* -------------------------------------------------------
+     COUNTDOWN
+     ------------------------------------------------------- */
+
+  .countdown-section {
+    min-height: 520px;
+
+    padding: 90px 20px;
+  }
+
+
+  .countdown-section h2 {
+    font-size: 54px;
+  }
+
+
+  .countdown {
+    gap: 3px;
+  }
+
+
+  .count-item span {
+    font-size: 30px;
+  }
+
+
+  .count-item small {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* -------------------------------------------------------
+     EVENTS
+     ------------------------------------------------------- */
+
+  .events-section {
+    padding: 75px 20px 80px;
+  }
+
+
+  .events-section h2 {
+    font-size: 43px;
+  }
+
+
+  .event-card {
+    min-height: 310px;
+
+    padding: 45px 20px;
+
+    margin: 28px auto;
+  }
+
+
+  .event-card h3 {
+    font-size: 36px;
+  }
+
+
+  .event-date {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .event-time {
+    font-size: 18px;
+  }
+
+
+  .event-venue {
+    font-size: 15px;
+  }
+
+
+  /* -------------------------------------------------------
+     THANK YOU
+     ------------------------------------------------------- */
+
+  .thank-you-section {
+    min-height: 500px;
+
+    padding: 80px 25px;
+  }
+
+
+  .thank-you-section h2 {
+    font-size: 42px;
+  }
+
+
+  .thank-you-text {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-section {
+    height: 700px;
+  }
+
+
+  .hero-image {
+    width: 120%;
+
+    left: -10%;
+  }
+
+
+  .hero-content {
+    top: 7%;
+  }
+
+
+  .hero-decoration {
+    width: 58%;
+  }
+
+
+  .eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .name-block h1 {
+    font-size: 42px;
+  }
+
+
+  .ampersand {
+    font-size: 24px;
+  }
+
+
+  .gold-line {
+    width: 50%;
+  }
+
+
+  .wedding-date {
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .scroll-button {
+    bottom: 23px;
+
+    font-size: 8px;
+  }
+
+
+  .countdown-section h2 {
+    font-size: 48px;
+  }
+
+
+  .count-item span {
+    font-size: 26px;
+  }
+
+
+  .events-section h2 {
+    font-size: 37px;
+  }
+
+
+  .event-card h3 {
+    font-size: 31px;
+  }
+
+
+  .thank-you-section h2 {
+    font-size: 37px;
+  }
+
+}
+
+
+/* =========================================================
+   REMAINING PAGES ONLY
+   DO NOT CHANGE HERO / FIRST PAGE
+========================================================= */
+
+
+/* =========================================================
+   COUNTDOWN PAGE
+========================================================= */
+
+.countdown-section {
+  width: 100%;
+
+  min-height: 520px;
+
+  padding: 100px 25px;
+
+  background: #f8f2e7;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* THE COUNTDOWN BEGINS */
+
+.countdown-section .section-eyebrow {
+  margin: 0 0 18px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.32em;
+
+  color: #b47d2c;
+
+  text-align: center;
+}
+
+
+/* Until Forever */
+
+.countdown-section h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(60px, 7vw, 95px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+/* Small gold line */
+
+.countdown-section .small-gold-line {
+  width: 90px;
+
+  height: 1px;
+
+  margin: 28px auto 40px;
+
+  background: #c18a35;
+}
+
+
+/* =========================================================
+   COUNTDOWN NUMBERS
+   ========================================================= */
+
+.countdown-section .countdown {
+  width: 100%;
+
+  max-width: 650px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  /*
+     REDUCED FROM 35px
+     Numbers are now closer together.
+  */
+  gap: 12px;
+
+  text-align: center;
+}
+
+
+.countdown-section .count-item {
+  /*
+     Reduced from 85px
+  */
+  min-width: 65px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* Number */
+
+.countdown-section .count-item span {
+  display: block;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+/* DAYS / HOURS / MINUTES / SECONDS */
+
+.countdown-section .count-item small {
+  display: block;
+
+  margin-top: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  color: #9b6a25;
+
+  white-space: nowrap;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EVENTS PAGE
+========================================================= */
+
+.events-section {
+  width: 100%;
+
+  padding: 100px 25px 110px;
+
+  background: #f8f2e7;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* JOIN US IN CELEBRATION */
+
+.events-section > .section-eyebrow {
+  margin: 0 0 18px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: #b47d2c;
+
+  text-align: center;
+}
+
+
+/* Wedding Celebrations */
+
+.events-section > h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(55px, 6vw, 85px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+/* Gold line */
+
+.events-section > .small-gold-line {
+  width: 90px;
+
+  height: 1px;
+
+  margin: 28px auto 45px;
+
+  background: #c18a35;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+========================================================= */
+
+.events-section .event-card {
+  width: min(100%, 700px);
+
+  min-height: 320px;
+
+  margin: 30px auto;
+
+  padding: 55px 30px;
+
+  border: 1px solid #dfcda9;
+
+  background: rgba(255, 252, 245, 0.4);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* Event number */
+
+.events-section .event-number {
+  margin: 0 0 25px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.45em;
+
+  color: #b47d2c;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EVENT DATE
+========================================================= */
+
+.events-section .event-date {
+  margin: 0 0 22px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #a56d1d;
+
+  letter-spacing: 0.25em;
+
+  line-height: 1.5;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+
+/* Event title */
+
+.events-section .event-card h3 {
+  margin: 0 0 18px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(42px, 5vw, 62px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+/* Event time */
+
+.events-section .event-time {
+  margin: 0 0 20px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+/* Venue */
+
+.events-section .event-venue {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #56372a;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MARRIAGE CARD
+========================================================= */
+
+.events-section .wedding-card {
+  background: #321b12;
+
+  border: none;
+}
+
+
+.events-section .wedding-card .event-number {
+  color: #d7a042;
+}
+
+
+.events-section .wedding-card .event-date {
+  color: #e0ae50;
+}
+
+
+.events-section .wedding-card h3 {
+  color: #fff4df;
+}
+
+
+.events-section .wedding-card .event-time {
+  color: #fff4df;
+}
+
+
+.events-section .wedding-card .event-venue {
+  color: #fff4df;
+}
+
+
+/* =========================================================
+   THANK YOU PAGE
+========================================================= */
+
+.thank-you-section {
+  width: 100%;
+
+  min-height: 520px;
+
+  padding: 110px 25px;
+
+  background: #f8f2e7;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+.thank-you-section .section-eyebrow {
+  margin: 0 0 18px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: #b47d2c;
+
+  text-align: center;
+}
+
+
+.thank-you-section h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(50px, 6vw, 80px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  color: #321b12;
+
+  text-align: center;
+}
+
+
+.thank-you-section .thank-you-text {
+  max-width: 600px;
+
+  margin: 30px auto 15px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+
+  color: #56372a;
+
+  text-align: center;
+}
+
+
+.thank-you-section .thank-you-names {
+  margin-top: 15px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+
+  color: #a56d1d;
+
+  text-align: center;
+}
+
+
+.thank-you-section .heart {
+  margin-top: 20px;
+
+  font-size: 28px;
+
+  color: #b47d2c;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE - REMAINING PAGES ONLY
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* -------------------------
+     COUNTDOWN
+  ------------------------- */
+
+  .countdown-section {
+    min-height: 450px;
+
+    padding: 80px 15px;
+  }
+
+
+  .countdown-section .section-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+  }
+
+
+  .countdown-section h2 {
+    font-size: 58px;
+  }
+
+
+  .countdown-section .small-gold-line {
+    margin: 25px auto 35px;
+  }
+
+
+  .countdown-section .countdown {
+    width: 100%;
+
+    /*
+       REDUCED FROM 8px TO 0px
+       This is the main change for
+       your screenshot.
+    */
+    gap: 0;
+  }
+
+
+  .countdown-section .count-item {
+    /*
+       Slightly narrower so the four
+       numbers sit closer together.
+    */
+    min-width: 58px;
+  }
+
+
+  .countdown-section .count-item span {
+    font-size: 34px;
+  }
+
+
+  .countdown-section .count-item small {
+    margin-top: 8px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  /* -------------------------
+     EVENTS
+  ------------------------- */
+
+  .events-section {
+    padding: 75px 15px 90px;
+  }
+
+
+  .events-section > .section-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .events-section > h2 {
+    font-size: 50px;
+  }
+
+
+  .events-section > .small-gold-line {
+    margin: 25px auto 35px;
+  }
+
+
+  .events-section .event-card {
+    width: 100%;
+
+    min-height: 300px;
+
+    margin: 25px auto;
+
+    padding: 50px 18px;
+  }
+
+
+  .events-section .event-number {
+    font-size: 9px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .events-section .event-date {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    color: #a56d1d;
+
+    margin-bottom: 18px;
+
+    line-height: 1.5;
+  }
+
+
+  .events-section .event-card h3 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .events-section .event-time {
+    font-size: 15px;
+
+    margin-bottom: 17px;
+  }
+
+
+  .events-section .event-venue {
+    font-size: 17px;
+
+    line-height: 1.45;
+  }
+
+
+  .events-section .wedding-card .event-date {
+    color: #e0ae50;
+  }
+
+
+  /* -------------------------
+     THANK YOU
+  ------------------------- */
+
+  .thank-you-section {
+    min-height: 450px;
+
+    padding: 80px 20px;
+  }
+
+
+  .thank-you-section .section-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .thank-you-section h2 {
+    font-size: 48px;
+  }
+
+
+  .thank-you-section .thank-you-text {
+    max-width: 340px;
+
+    font-size: 17px;
+
+    margin-top: 25px;
+  }
+
+
+  .thank-you-section .thank-you-names {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE - REMAINING PAGES ONLY
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .countdown-section h2 {
+    font-size: 52px;
+  }
+
+
+  .countdown-section .countdown {
+    /*
+       Keep numbers close even on
+       very small screens.
+    */
+    gap: 0;
+  }
+
+
+  .countdown-section .count-item {
+    min-width: 52px;
+  }
+
+
+  .countdown-section .count-item span {
+    font-size: 29px;
+  }
+
+
+  .countdown-section .count-item small {
+    font-size: 6px;
+  }
+
+
+  .events-section > h2 {
+    font-size: 44px;
+  }
+
+
+  .events-section .event-date {
+    font-size: 12px;
+
+    letter-spacing: 0.11em;
+  }
+
+
+  .events-section .event-card h3 {
+    font-size: 36px;
+  }
+
+
+  .events-section .event-venue {
+    font-size: 16px;
+  }
+}
