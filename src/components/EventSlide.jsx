@@ -10,19 +10,30 @@ function EventSlide({
   address,
   mapsUrl,
 }) {
-  return (
-    <section className="event-section">
-      <div className="decorative-circle"></div>
+  const isMarriage =
+    title?.toLowerCase().includes("marriage");
 
+  return (
+    <section
+      className={`event-section ${
+        isMarriage ? "marriage-event" : ""
+      }`}
+    >
       <motion.div
         className="event-content"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={fadeUp}
       >
-        <p className="eyebrow">
-          {subtitle}
+        {subtitle && (
+          <p className="eyebrow event-subtitle">
+            {subtitle}
+          </p>
+        )}
+
+        <p className="event-date">
+          {date}
         </p>
 
         <h2 className="event-title">
@@ -31,21 +42,23 @@ function EventSlide({
 
         <div className="gold-divider"></div>
 
-        <p className="event-date">
-          {date}
-        </p>
+        {time && (
+          <p className="event-time">
+            {time}
+          </p>
+        )}
 
-        <p className="event-time">
-          {time}
-        </p>
+        {venue && (
+          <h3 className="event-venue">
+            📍 {venue}
+          </h3>
+        )}
 
-        <h3 className="event-venue">
-          {venue}
-        </h3>
-
-        <p className="event-address">
-          {address}
-        </p>
+        {address && (
+          <p className="event-address">
+            {address}
+          </p>
+        )}
 
         {mapsUrl && (
           <a

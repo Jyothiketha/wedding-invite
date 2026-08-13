@@ -8,7 +8,7 @@ function FinalSlide() {
         className="final-content"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.25 }}
         variants={fadeUp}
       >
         <p className="eyebrow">
@@ -29,6 +29,10 @@ function FinalSlide() {
 
         <div className="final-names">
           Bride & Groom
+        </div>
+
+        <div className="final-heart">
+          ♥
         </div>
       </motion.div>
     </section>
