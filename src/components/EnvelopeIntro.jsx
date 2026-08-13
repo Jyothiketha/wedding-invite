@@ -1,16 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function EnvelopeIntro({ onComplete }) {
   const [opened, setOpened] = useState(false);
-
-  useEffect(() => {
-    const alreadyInvited = sessionStorage.getItem("invited");
-
-    if (alreadyInvited) {
-      onComplete();
-    }
-  }, [onComplete]);
 
   const handleTap = () => {
     if (opened) return;
@@ -18,7 +10,6 @@ export default function EnvelopeIntro({ onComplete }) {
     setOpened(true);
 
     setTimeout(() => {
-      sessionStorage.setItem("invited", "true");
       onComplete();
     }, 1500);
   };
