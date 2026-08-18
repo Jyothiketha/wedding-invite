@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import "./App.css";
 import EnvelopeIntro from "./components/EnvelopeIntro";
@@ -82,7 +81,7 @@ function App() {
   };
 
   // =====================================================
-  // ENVELOPE FIRST
+  // ENVELOPE
   // =====================================================
 
   if (showEnvelope) {
@@ -94,7 +93,7 @@ function App() {
   }
 
   // =====================================================
-  // WEDDING PAGE
+  // MAIN PAGE
   // =====================================================
 
   return (
@@ -102,7 +101,6 @@ function App() {
 
       {/* =================================================
           HERO
-          DO NOT CHANGE
       ================================================= */}
 
       <section className="hero-section">
@@ -205,42 +203,51 @@ function App() {
 
       {/* =================================================
           COUNTDOWN
+          IMAGE 3 IS BEHIND THIS ENTIRE SECTION
       ================================================= */}
 
       <section className="countdown-section">
 
-        <p className="section-eyebrow">
-          THE COUNTDOWN BEGINS
-        </p>
+        <div className="countdown-background"></div>
 
-        <h2>
-          Until
-          <br />
-          Forever
-        </h2>
+        <div className="countdown-overlay"></div>
 
-        <div className="small-gold-line"></div>
+        <div className="countdown-content">
 
-        <div className="countdown">
+          <p className="section-eyebrow">
+            THE COUNTDOWN BEGINS
+          </p>
 
-          <div className="count-item">
-            <span>{timeLeft.days}</span>
-            <small>DAYS</small>
-          </div>
+          <h2>
+            Until
+            <br />
+            Forever
+          </h2>
 
-          <div className="count-item">
-            <span>{timeLeft.hours}</span>
-            <small>HOURS</small>
-          </div>
+          <div className="small-gold-line"></div>
 
-          <div className="count-item">
-            <span>{timeLeft.minutes}</span>
-            <small>MINUTES</small>
-          </div>
+          <div className="countdown">
 
-          <div className="count-item">
-            <span>{timeLeft.seconds}</span>
-            <small>SECONDS</small>
+            <div className="count-item">
+              <span>{timeLeft.days}</span>
+              <small>DAYS</small>
+            </div>
+
+            <div className="count-item">
+              <span>{timeLeft.hours}</span>
+              <small>HOURS</small>
+            </div>
+
+            <div className="count-item">
+              <span>{timeLeft.minutes}</span>
+              <small>MINUTES</small>
+            </div>
+
+            <div className="count-item">
+              <span>{timeLeft.seconds}</span>
+              <small>SECONDS</small>
+            </div>
+
           </div>
 
         </div>
@@ -249,7 +256,7 @@ function App() {
 
 
       {/* =================================================
-          EVENTS
+          WEDDING CELEBRATIONS
       ================================================= */}
 
       <section
@@ -269,16 +276,11 @@ function App() {
 
 
         {/* =================================================
-            PRE-WEDDING EVENTS
-            ONE CONTINUOUS IMAGE 1
+            IMAGE 1
+            GROOM MAKEOVER → SANGEETH → BONALU & LUNCH
         ================================================= */}
 
         <div className="pre-wedding-events">
-
-          {/* =================================================
-              IMAGE 1
-              Groom Makeover → Sangeeth → Bonalu & Lunch
-          ================================================= */}
 
           <img
             src={`${import.meta.env.BASE_URL}image1.png`}
@@ -286,14 +288,10 @@ function App() {
             className="pre-wedding-background-image"
           />
 
-          {/* Readability overlay */}
-
           <div className="pre-wedding-photo-overlay"></div>
 
 
-          {/* =================================================
-              GROOM MAKEOVER
-          ================================================= */}
+          {/* GROOM MAKEOVER */}
 
           <div className="pre-wedding-event">
 
@@ -316,9 +314,7 @@ function App() {
           </div>
 
 
-          {/* =================================================
-              SANGEETH
-          ================================================= */}
+          {/* SANGEETH */}
 
           <div className="pre-wedding-event">
 
@@ -341,9 +337,7 @@ function App() {
           </div>
 
 
-          {/* =================================================
-              BONALU & LUNCH
-          ================================================= */}
+          {/* BONALU & LUNCH */}
 
           <div className="pre-wedding-event">
 
@@ -372,7 +366,6 @@ function App() {
 
         {/* =================================================
             MARRIAGE
-            NO PHOTO
         ================================================= */}
 
         <div className="event-card wedding-card">
@@ -400,7 +393,6 @@ function App() {
 
         {/* =================================================
             RECEPTION
-            NO PHOTO
         ================================================= */}
 
         <div className="event-card">
@@ -430,7 +422,7 @@ function App() {
 
       {/* =================================================
           THANK YOU
-          IMAGE 2 IS APPLIED FROM CSS
+          IMAGE 2
       ================================================= */}
 
       <section className="thank-you-section">

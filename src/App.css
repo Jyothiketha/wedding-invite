@@ -1847,3 +1847,777 @@ img {
     font-size: 14px;
   }
 }
+
+
+
+
+/* =========================================================
+   COUNTDOWN SECTION
+   IMAGE 3 BACKGROUND
+========================================================= */
+
+.countdown-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 720px;
+
+  padding: 18px 20px 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background: #f8f2e7;
+
+  isolation: isolate;
+
+  /*
+     Small visual separation from Hero section.
+     This is NOT part of the image crop.
+  */
+  margin-top: 14px;
+}
+
+
+/* =========================================================
+   IMAGE 3 BACKGROUND
+   CROP ONLY EXTRA WHITE SPACE ABOVE HEAD
+========================================================= */
+
+.countdown-background {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/image3.png");
+
+  background-repeat: no-repeat;
+
+  /*
+     Slight zoom keeps the couple large
+     without cutting too much of the image.
+  */
+  background-size: 132% auto;
+
+  /*
+     Move image upward moderately.
+
+     This removes part of the unnecessary
+     white space above the man's head.
+
+     It does NOT change the Hero/Countdown gap.
+  */
+  background-position: center -65px;
+
+  z-index: -3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE READABILITY OVERLAY
+========================================================= */
+
+.countdown-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(248, 242, 231, 0.36) 0%,
+
+      rgba(248, 242, 231, 0.24) 30%,
+
+      rgba(248, 242, 231, 0.30) 52%,
+
+      rgba(248, 242, 231, 0.58) 74%,
+
+      rgba(248, 242, 231, 0.90) 100%
+    );
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   COUNTDOWN CONTENT
+========================================================= */
+
+.countdown-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  text-align: center;
+
+  /*
+     Keeps the text away from the couple's faces.
+     The content begins lower on the image.
+  */
+  padding-top: 410px;
+
+  padding-bottom: 55px;
+}
+
+
+/* =========================================================
+   THE COUNTDOWN BEGINS
+   NORMAL TEXT - NO BOX
+========================================================= */
+
+.countdown-section .section-eyebrow {
+  position: relative;
+
+  display: block;
+
+  margin: 0 0 11px;
+
+  padding: 0;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  line-height: 1.5;
+
+  color: #9a5d16;
+
+  text-align: center;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  /*
+     Strong soft glow makes the text
+     visible over the photo.
+  */
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 1),
+    0 0 5px rgba(255, 255, 255, 1),
+    0 1px 4px rgba(255, 255, 255, 0.98),
+    0 2px 8px rgba(255, 255, 255, 0.90);
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   UNTIL FOREVER
+========================================================= */
+
+.countdown-section h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  /*
+     Slightly smaller than the earlier version.
+  */
+  font-size: clamp(54px, 6.5vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.94;
+
+  color: #321b12;
+
+  text-align: center;
+
+  /*
+     Soft glow for visibility over photo.
+  */
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 1),
+    0 0 6px rgba(255, 255, 255, 0.95),
+    0 1px 4px rgba(255, 255, 255, 0.95),
+    0 2px 8px rgba(255, 255, 255, 0.80);
+
+  z-index: 10;
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.countdown-section .small-gold-line {
+  width: 85px;
+
+  height: 1px;
+
+  margin: 22px auto 31px;
+
+  background: #c18a35;
+
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.95),
+    0 1px 3px rgba(255, 255, 255, 0.90);
+}
+
+
+/* =========================================================
+   COUNTDOWN NUMBERS
+========================================================= */
+
+.countdown-section .countdown {
+  width: 100%;
+
+  max-width: 420px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 4px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   COUNT ITEM
+========================================================= */
+
+.countdown-section .count-item {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   COUNT NUMBER
+========================================================= */
+
+.countdown-section .count-item span {
+  display: block;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 43px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #321b12;
+
+  text-align: center;
+
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 1),
+    0 0 5px rgba(255, 255, 255, 0.95),
+    0 1px 4px rgba(255, 255, 255, 0.95),
+    0 2px 7px rgba(255, 255, 255, 0.80);
+}
+
+
+/* =========================================================
+   COUNT LABEL
+========================================================= */
+
+.countdown-section .count-item small {
+  display: block;
+
+  margin-top: 8px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  color: #9b6a25;
+
+  white-space: nowrap;
+
+  text-align: center;
+
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 1),
+    0 1px 4px rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .countdown-section {
+    min-height: 700px;
+
+    padding: 0 15px 55px;
+
+    margin-top: 12px;
+
+    justify-content: flex-end;
+  }
+
+
+  /* =======================================================
+     IMAGE 3
+     MODERATE TOP WHITE-SPACE CROP
+  ======================================================= */
+
+  .countdown-background {
+    width: 100%;
+
+    height: 100%;
+
+    background-size: 132% auto;
+
+    /*
+       Moderate crop.
+
+       Keeps some white space above
+       the man's head, but removes the
+       excessive empty area.
+    */
+    background-position: center -65px;
+
+    background-repeat: no-repeat;
+  }
+
+
+  /* =======================================================
+     OVERLAY
+  ======================================================= */
+
+  .countdown-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+
+        rgba(248, 242, 231, 0.36) 0%,
+
+        rgba(248, 242, 231, 0.24) 30%,
+
+        rgba(248, 242, 231, 0.30) 52%,
+
+        rgba(248, 242, 231, 0.62) 74%,
+
+        rgba(248, 242, 231, 0.92) 100%
+      );
+  }
+
+
+  /* =======================================================
+     COUNTDOWN CONTENT
+  ======================================================= */
+
+  .countdown-content {
+    width: 100%;
+
+    max-width: 390px;
+
+    /*
+       Text begins lower,
+       away from faces.
+    */
+    padding-top: 390px;
+
+    padding-bottom: 50px;
+  }
+
+
+  /* =======================================================
+     THE COUNTDOWN BEGINS
+  ======================================================= */
+
+  .countdown-section .section-eyebrow {
+    display: block;
+
+    margin: 0 0 10px;
+
+    padding: 0;
+
+    font-family:
+      Arial,
+      sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.20em;
+
+    line-height: 1.5;
+
+    color: #9a5d16;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 1),
+      0 0 5px rgba(255, 255, 255, 1),
+      0 1px 4px rgba(255, 255, 255, 0.98),
+      0 2px 8px rgba(255, 255, 255, 0.90);
+  }
+
+
+  /* =======================================================
+     UNTIL FOREVER
+  ======================================================= */
+
+  .countdown-section h2 {
+    font-size: 54px;
+
+    line-height: 0.94;
+
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 1),
+      0 0 6px rgba(255, 255, 255, 0.98),
+      0 1px 4px rgba(255, 255, 255, 0.95),
+      0 2px 8px rgba(255, 255, 255, 0.85);
+  }
+
+
+  /* =======================================================
+     GOLD LINE
+  ======================================================= */
+
+  .countdown-section .small-gold-line {
+    width: 80px;
+
+    height: 1px;
+
+    margin: 20px auto 28px;
+
+    background: #c18a35;
+
+    box-shadow:
+      0 0 4px rgba(255, 255, 255, 0.95);
+  }
+
+
+  /* =======================================================
+     COUNTDOWN
+  ======================================================= */
+
+  .countdown-section .countdown {
+    width: 100%;
+
+    max-width: 390px;
+
+    gap: 0;
+  }
+
+
+  /* =======================================================
+     COUNT NUMBERS
+  ======================================================= */
+
+  .countdown-section .count-item span {
+    font-size: 32px;
+
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 1),
+      0 0 5px rgba(255, 255, 255, 0.98),
+      0 1px 4px rgba(255, 255, 255, 0.95);
+  }
+
+
+  /* =======================================================
+     COUNT LABELS
+  ======================================================= */
+
+  .countdown-section .count-item small {
+    margin-top: 7px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.08em;
+
+    text-shadow:
+      0 0 2px rgba(255, 255, 255, 1),
+      0 1px 4px rgba(255, 255, 255, 0.95);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .countdown-section {
+    min-height: 650px;
+
+    padding-bottom: 48px;
+
+    margin-top: 10px;
+  }
+
+
+  /* =======================================================
+     IMAGE 3
+  ======================================================= */
+
+  .countdown-background {
+    background-size: 132% auto;
+
+    /*
+       Slightly less crop on very small screens
+       so the head retains a little white space.
+    */
+    background-position: center -55px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .countdown-content {
+    padding-top: 350px;
+
+    padding-bottom: 45px;
+  }
+
+
+  /* =======================================================
+     EYEBROW
+  ======================================================= */
+
+  .countdown-section .section-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+
+    margin-bottom: 9px;
+  }
+
+
+  /* =======================================================
+     TITLE
+  ======================================================= */
+
+  .countdown-section h2 {
+    font-size: 50px;
+
+    line-height: 0.94;
+  }
+
+
+  /* =======================================================
+     GOLD LINE
+  ======================================================= */
+
+  .countdown-section .small-gold-line {
+    width: 75px;
+
+    margin: 19px auto 26px;
+  }
+
+
+  /* =======================================================
+     NUMBERS
+  ======================================================= */
+
+  .countdown-section .count-item span {
+    font-size: 29px;
+  }
+
+
+  /* =======================================================
+     LABELS
+  ======================================================= */
+
+  .countdown-section .count-item small {
+    font-size: 6px;
+
+    letter-spacing: 0.07em;
+  }
+}
+
+
+/* =========================================================
+   THANK YOU - FINAL SMALL REFINEMENT
+   ADD AT THE VERY BOTTOM
+========================================================= */
+
+/* THANK YOU */
+.thankyou-section .section-eyebrow,
+.thank-you-section .section-eyebrow,
+.thankyou-content .section-eyebrow,
+.thank-you-content .section-eyebrow {
+  color: #f4c45d !important;
+
+  font-size: 12px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.28em !important;
+
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.75),
+    0 0 7px rgba(255, 220, 140, 0.55) !important;
+}
+
+
+/* WE CAN'T WAIT TO CELEBRATE WITH YOU */
+.thankyou-section h2,
+.thank-you-section h2,
+.thankyou-content h2,
+.thank-you-content h2 {
+  font-size: clamp(42px, 5vw, 62px) !important;
+
+  line-height: 1.03 !important;
+
+  font-weight: 400 !important;
+
+  color: #ffffff !important;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.65),
+    0 3px 9px rgba(0, 0, 0, 0.45),
+    0 0 8px rgba(255, 255, 255, 0.22) !important;
+}
+
+
+/* DESCRIPTION - SLIGHTLY MORE VISIBLE */
+.thankyou-section p,
+.thank-you-section p,
+.thankyou-content p,
+.thank-you-content p {
+  color: #ffffff !important;
+
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.75),
+    0 2px 7px rgba(0, 0, 0, 0.45),
+    0 0 7px rgba(255, 255, 255, 0.28) !important;
+}
+
+
+/* NAMES */
+.thankyou-section .couple-names,
+.thank-you-section .couple-names,
+.thankyou-content .couple-names,
+.thank-you-content .couple-names {
+  color: #f5c65d !important;
+
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.75),
+    0 0 8px rgba(255, 210, 100, 0.45) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .thankyou-section .section-eyebrow,
+  .thank-you-section .section-eyebrow,
+  .thankyou-content .section-eyebrow,
+  .thank-you-content .section-eyebrow {
+    font-size: 10px !important;
+
+    letter-spacing: 0.22em !important;
+  }
+
+
+  .thankyou-section h2,
+  .thank-you-section h2,
+  .thankyou-content h2,
+  .thank-you-content h2 {
+    font-size: 39px !important;
+
+    line-height: 1.03 !important;
+  }
+
+
+  .thankyou-section p,
+  .thank-you-section p,
+  .thankyou-content p,
+  .thank-you-content p {
+    font-size: 14px !important;
+
+    line-height: 1.55 !important;
+  }
+
+
+  .thankyou-section .couple-names,
+  .thank-you-section .couple-names,
+  .thankyou-content .couple-names,
+  .thank-you-content .couple-names {
+    font-size: 13px !important;
+  }
+}
