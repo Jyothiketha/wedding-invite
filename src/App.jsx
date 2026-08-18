@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import "./App.css";
 import EnvelopeIntro from "./components/EnvelopeIntro";
@@ -34,7 +35,6 @@ function App() {
           minutes: 0,
           seconds: 0,
         });
-
         return;
       }
 
@@ -268,78 +268,112 @@ function App() {
         <div className="small-gold-line"></div>
 
 
-        {/* GROOM MAKEOVER */}
+        {/* =================================================
+            PRE-WEDDING EVENTS
+            ONE CONTINUOUS IMAGE 1
+        ================================================= */}
 
-        <div className="event-card">
+        <div className="pre-wedding-events">
 
-          <p className="event-date">
-            23 · AUGUST · 2026
-          </p>
+          {/* =================================================
+              IMAGE 1
+              Groom Makeover → Sangeeth → Bonalu & Lunch
+          ================================================= */}
 
-          <h3>
-            Groom Makeover
-          </h3>
+          <img
+            src={`${import.meta.env.BASE_URL}image1.png`}
+            alt=""
+            className="pre-wedding-background-image"
+          />
 
-          <p className="event-time">
-            Throughout the day
-          </p>
+          {/* Readability overlay */}
 
-          <p className="event-venue">
-            📍 Pedapalla
-          </p>
+          <div className="pre-wedding-photo-overlay"></div>
+
+
+          {/* =================================================
+              GROOM MAKEOVER
+          ================================================= */}
+
+          <div className="pre-wedding-event">
+
+            <p className="event-date">
+              23 · AUGUST · 2026
+            </p>
+
+            <h3>
+              Groom Makeover
+            </h3>
+
+            <p className="event-time">
+              Throughout the day
+            </p>
+
+            <p className="event-venue">
+              📍 Pedapalla
+            </p>
+
+          </div>
+
+
+          {/* =================================================
+              SANGEETH
+          ================================================= */}
+
+          <div className="pre-wedding-event">
+
+            <p className="event-date">
+              24 · AUGUST · 2026
+            </p>
+
+            <h3>
+              Sangeeth
+            </h3>
+
+            <p className="event-time">
+              Evening
+            </p>
+
+            <p className="event-venue">
+              📍 Pedapalla
+            </p>
+
+          </div>
+
+
+          {/* =================================================
+              BONALU & LUNCH
+          ================================================= */}
+
+          <div className="pre-wedding-event">
+
+            <p className="event-date">
+              25 · AUGUST · 2026
+            </p>
+
+            <h3>
+              Bonalu &amp; Lunch
+            </h3>
+
+            <p className="event-time">
+              12:00 PM
+            </p>
+
+            <p className="event-venue">
+              📍 Near SBPBK Function Hall,
+              <br />
+              Pedapalla
+            </p>
+
+          </div>
 
         </div>
 
 
-        {/* SANGEETH */}
-
-        <div className="event-card">
-
-          <p className="event-date">
-            24 · AUGUST · 2026
-          </p>
-
-          <h3>
-            Sangeeth
-          </h3>
-
-          <p className="event-time">
-            Evening
-          </p>
-
-          <p className="event-venue">
-            📍 Pedapalla
-          </p>
-
-        </div>
-
-
-        {/* BONALU */}
-
-        <div className="event-card">
-
-          <p className="event-date">
-            25 · AUGUST · 2026
-          </p>
-
-          <h3>
-            Bonalu &amp; Lunch
-          </h3>
-
-          <p className="event-time">
-            12:00 PM
-          </p>
-
-          <p className="event-venue">
-            📍 Near SBPBK Function Hall,
-            <br />
-            Pedapalla
-          </p>
-
-        </div>
-
-
-        {/* MARRIAGE */}
+        {/* =================================================
+            MARRIAGE
+            NO PHOTO
+        ================================================= */}
 
         <div className="event-card wedding-card">
 
@@ -364,7 +398,10 @@ function App() {
         </div>
 
 
-        {/* RECEPTION */}
+        {/* =================================================
+            RECEPTION
+            NO PHOTO
+        ================================================= */}
 
         <div className="event-card">
 
@@ -393,6 +430,7 @@ function App() {
 
       {/* =================================================
           THANK YOU
+          IMAGE 2 IS APPLIED FROM CSS
       ================================================= */}
 
       <section className="thank-you-section">

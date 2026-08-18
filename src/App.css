@@ -1,3 +1,4 @@
+
 /* =========================================================
    GLOBAL
 ========================================================= */
@@ -168,11 +169,6 @@ img {
   background: #1d100b;
 }
 
-
-/* =========================================================
-   COUPLE IMAGE
-========================================================= */
-
 .hero-image {
   position: absolute;
 
@@ -195,11 +191,6 @@ img {
   z-index: 1;
 }
 
-
-/* =========================================================
-   DARK OVERLAY
-========================================================= */
-
 .hero-overlay {
   position: absolute;
 
@@ -216,11 +207,6 @@ img {
       rgba(18, 10, 6, 0.58) 100%
     );
 }
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
 
 .hero-content {
   position: absolute;
@@ -249,11 +235,6 @@ img {
 
   color: #fff2d2;
 }
-
-
-/* =========================================================
-   TOP DECORATION
-========================================================= */
 
 .hero-decoration {
   width: 58%;
@@ -297,11 +278,6 @@ img {
   color: #e3a92e;
 }
 
-
-/* =========================================================
-   WE ARE GETTING MARRIED
-========================================================= */
-
 .eyebrow {
   margin: 0;
 
@@ -327,11 +303,6 @@ img {
     0 2px 7px rgba(0, 0, 0, 0.45);
 }
 
-
-/* =========================================================
-   NAMES
-========================================================= */
-
 .name-block {
   width: 100%;
 
@@ -347,11 +318,6 @@ img {
 
   text-align: center;
 }
-
-
-/* =========================================================
-   NAME TEXT
-========================================================= */
 
 .name-block h1 {
   display: block;
@@ -384,11 +350,6 @@ img {
   text-shadow:
     0 3px 9px rgba(0, 0, 0, 0.55);
 }
-
-
-/* =========================================================
-   AMPERSAND ROW
-========================================================= */
 
 .ampersand-row {
   width: 100%;
@@ -431,11 +392,6 @@ img {
   color: #dca229;
 }
 
-
-/* =========================================================
-   GOLD LINE UNDER NAMES
-========================================================= */
-
 .gold-line {
   width: 52%;
 
@@ -468,11 +424,6 @@ img {
   line-height: 1;
 }
 
-
-/* =========================================================
-   DATE
-========================================================= */
-
 .wedding-date {
   width: 100%;
 
@@ -495,11 +446,6 @@ img {
   text-shadow:
     0 2px 6px rgba(0, 0, 0, 0.45);
 }
-
-
-/* =========================================================
-   SCROLL BUTTON
-========================================================= */
 
 .scroll-button {
   position: absolute;
@@ -559,7 +505,6 @@ img {
 
 /* =========================================================
    COUNTDOWN
-   AFTER HERO
 ========================================================= */
 
 .countdown-section {
@@ -585,7 +530,9 @@ img {
 .countdown-section .section-eyebrow {
   margin: 0 0 14px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 12px;
 
@@ -628,11 +575,6 @@ img {
 
   background: #c18a35;
 }
-
-
-/* =========================================================
-   COUNTDOWN NUMBERS
-========================================================= */
 
 .countdown-section .countdown {
   width: 100%;
@@ -688,7 +630,9 @@ img {
 
   margin-top: 8px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 8px;
 
@@ -705,7 +649,7 @@ img {
 
 
 /* =========================================================
-   EVENTS
+   WEDDING CELEBRATIONS
 ========================================================= */
 
 .events-section {
@@ -723,7 +667,9 @@ img {
 .events-section > .section-eyebrow {
   margin: 0 0 14px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 12px;
 
@@ -767,11 +713,233 @@ img {
 
 
 /* =========================================================
-   EVENT CARDS
-   NATURAL HEIGHT
+   IMAGE 1
+   GROOM MAKEOVER → SANGEETH → BONALU & LUNCH
+
+   IMPORTANT:
+   IMAGE IS APPLIED DIRECTLY TO THIS CONTAINER.
+   NO JSX IMAGE IS REQUIRED.
 ========================================================= */
 
-.events-section .event-card {
+.pre-wedding-events {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 auto 35px;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  isolation: isolate;
+
+  background-color: #321b12;
+
+  /*
+     CHANGE image1.png ONLY IF YOUR FILE HAS
+     A DIFFERENT EXTENSION.
+  */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(25, 10, 5, 0.56) 0%,
+      rgba(25, 10, 5, 0.42) 25%,
+      rgba(25, 10, 5, 0.38) 50%,
+      rgba(25, 10, 5, 0.44) 75%,
+      rgba(25, 10, 5, 0.60) 100%
+    ),
+    url("/image1.png");
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   HIDE OLD BACKGROUND IMAGE
+   If JSX already contains this image, it won't interfere.
+========================================================= */
+
+.pre-wedding-background-image {
+  display: none !important;
+}
+
+
+/* =========================================================
+   PRE-WEDDING EVENTS
+========================================================= */
+
+.pre-wedding-event {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 285px;
+
+  padding: 60px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #fff8e8;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SEPARATOR
+========================================================= */
+
+.pre-wedding-event + .pre-wedding-event::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 75px;
+
+  height: 1px;
+
+  background: rgba(241, 201, 109, 0.9);
+}
+
+
+/* =========================================================
+   PRE-WEDDING DATE
+========================================================= */
+
+.pre-wedding-event .event-date {
+  margin: 0 0 14px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  line-height: 1.5;
+
+  color: #f5cf72;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 5px #000,
+    0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================================
+   PRE-WEDDING TITLE
+========================================================= */
+
+.pre-wedding-event h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(42px, 8vw, 62px);
+
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  color: #fffaf0;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 3px #000,
+    0 4px 12px rgba(0, 0, 0, 0.95);
+}
+
+
+/* =========================================================
+   PRE-WEDDING TIME
+========================================================= */
+
+.pre-wedding-event .event-time {
+  margin: 17px 0 10px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: #fffaf0;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================================
+   PRE-WEDDING VENUE
+========================================================= */
+
+.pre-wedding-event .event-venue {
+  margin: 0;
+
+  max-width: 380px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  color: #fffaf0;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 9px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================================
+   MARRIAGE + RECEPTION
+========================================================= */
+
+.event-card {
   width: 100%;
 
   margin: 18px auto;
@@ -799,20 +967,12 @@ img {
   overflow: hidden;
 }
 
-
-/* First event */
-
-.events-section .event-card:first-of-type {
-  margin-top: 0;
-}
-
-
-/* Event date */
-
-.events-section .event-date {
+.event-card .event-date {
   margin: 0 0 15px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 13px;
 
@@ -829,10 +989,7 @@ img {
   white-space: nowrap;
 }
 
-
-/* Event title */
-
-.events-section .event-card h3 {
+.event-card h3 {
   margin: 0;
 
   font-family:
@@ -851,13 +1008,12 @@ img {
   text-align: center;
 }
 
-
-/* Event time */
-
-.events-section .event-time {
+.event-card .event-time {
   margin: 15px 0 13px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 16px;
 
@@ -870,10 +1026,7 @@ img {
   text-align: center;
 }
 
-
-/* Venue */
-
-.events-section .event-venue {
+.event-card .event-venue {
   margin: 0;
 
   max-width: 440px;
@@ -896,20 +1049,10 @@ img {
 
 
 /* =========================================================
-   RELATED EVENT SPACING
-========================================================= */
-
-.events-section .event-card + .event-card {
-  margin-top: 18px;
-}
-
-
-/* =========================================================
    MARRIAGE CARD
-   SPECIAL / LARGER
 ========================================================= */
 
-.events-section .wedding-card {
+.wedding-card {
   background: #321b12;
 
   border: none;
@@ -923,35 +1066,36 @@ img {
   margin-bottom: 26px;
 }
 
-.events-section .wedding-card .event-date {
+.wedding-card .event-date {
   color: #e0ae50;
 }
 
-.events-section .wedding-card h3 {
+.wedding-card h3 {
   color: #fff4df;
 
   font-size: clamp(46px, 6vw, 64px);
 }
 
-.events-section .wedding-card .event-time {
+.wedding-card .event-time {
   color: #fff4df;
 }
 
-.events-section .wedding-card .event-venue {
+.wedding-card .event-venue {
   color: #fff4df;
 }
 
 
 /* =========================================================
    THANK YOU
+   IMAGE 2 DIRECTLY AS BACKGROUND
 ========================================================= */
 
 .thank-you-section {
+  position: relative;
+
   width: 100%;
 
   padding: 120px 25px 130px;
-
-  background: #fffaf0;
 
   display: flex;
 
@@ -964,12 +1108,41 @@ img {
   text-align: center;
 
   overflow: hidden;
+
+  background-color: #321b12;
+
+  /*
+     IMAGE 2
+     CHANGE ONLY THE EXTENSION IF REQUIRED.
+  */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(25, 10, 5, 0.58) 0%,
+      rgba(25, 10, 5, 0.42) 30%,
+      rgba(25, 10, 5, 0.46) 65%,
+      rgba(25, 10, 5, 0.68) 100%
+    ),
+    url("/image2.png");
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
 }
+
+
+/* =========================================================
+   THANK YOU TEXT
+========================================================= */
 
 .thank-you-section .section-eyebrow {
   margin: 0 0 16px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 12px;
 
@@ -977,9 +1150,13 @@ img {
 
   letter-spacing: 0.28em;
 
-  color: #b47d2c;
+  color: #f3c966;
 
   text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 8px rgba(0, 0, 0, 0.9);
 }
 
 .thank-you-section h2 {
@@ -996,9 +1173,13 @@ img {
 
   line-height: 0.98;
 
-  color: #321b12;
+  color: #fffaf0;
 
   text-align: center;
+
+  text-shadow:
+    0 2px 3px #000,
+    0 4px 12px rgba(0, 0, 0, 0.95);
 }
 
 .thank-you-section .thank-you-text {
@@ -1015,15 +1196,21 @@ img {
 
   line-height: 1.5;
 
-  color: #56372a;
+  color: #fffaf0;
 
   text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 9px rgba(0, 0, 0, 0.9);
 }
 
 .thank-you-section .thank-you-names {
   margin-top: 12px;
 
-  font-family: "Montserrat", sans-serif;
+  font-family:
+    Arial,
+    sans-serif;
 
   font-size: 13px;
 
@@ -1031,9 +1218,13 @@ img {
 
   letter-spacing: 0.2em;
 
-  color: #a56d1d;
+  color: #f3c966;
 
   text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 8px rgba(0, 0, 0, 0.9);
 }
 
 .thank-you-section .heart {
@@ -1041,9 +1232,13 @@ img {
 
   font-size: 27px;
 
-  color: #b47d2c;
+  color: #f3c966;
 
   text-align: center;
+
+  text-shadow:
+    0 2px 4px #000,
+    0 3px 8px rgba(0, 0, 0, 0.9);
 }
 
 
@@ -1060,11 +1255,13 @@ img {
 
   .envelope-image {
     width: min(84vw, 350px);
+
     max-height: 50vh;
   }
 
   .envelope-hint {
     margin-top: 25px;
+
     font-size: 16px;
   }
 }
@@ -1076,13 +1273,10 @@ img {
 
 @media (max-width: 600px) {
 
-  /* =======================================================
-     ENVELOPE
-  ======================================================= */
-
   .envelope-content,
   .envelope-wrapper {
     width: 100%;
+
     height: 100%;
 
     padding: 20px 16px;
@@ -1111,10 +1305,7 @@ img {
   }
 
 
-  /* =======================================================
-     HERO
-     SAME AS BEFORE
-  ======================================================= */
+  /* HERO */
 
   .hero-section {
     height: 760px;
@@ -1251,9 +1442,7 @@ img {
   }
 
 
-  /* =======================================================
-     COUNTDOWN
-  ======================================================= */
+  /* COUNTDOWN */
 
   .countdown-section {
     padding: 68px 15px 62px;
@@ -1300,9 +1489,7 @@ img {
   }
 
 
-  /* =======================================================
-     EVENTS
-  ======================================================= */
+  /* EVENTS */
 
   .events-section {
     padding: 62px 15px 68px;
@@ -1327,32 +1514,62 @@ img {
   }
 
 
-  /* Event cards */
+  /* IMAGE 1 EVENTS */
 
-  .events-section .event-card {
+  .pre-wedding-events {
     width: 100%;
 
-    min-height: 0;
+    margin-bottom: 25px;
 
-    height: auto;
+    background-position: center center;
+  }
+
+  .pre-wedding-event {
+    min-height: 285px;
+
+    padding: 55px 18px;
+  }
+
+  .pre-wedding-event .event-date {
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 13px;
+  }
+
+  .pre-wedding-event h3 {
+    font-size: 43px;
+
+    line-height: 1.03;
+  }
+
+  .pre-wedding-event .event-time {
+    margin-top: 14px;
+
+    font-size: 14px;
+  }
+
+  .pre-wedding-event .event-venue {
+    max-width: 320px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+  }
+
+
+  /* MARRIAGE / RECEPTION */
+
+  .event-card {
+    width: 100%;
 
     margin: 16px auto;
 
     padding: 34px 18px;
   }
 
-  .events-section .event-card:first-of-type {
-    margin-top: 0;
-  }
-
-  .events-section .event-card + .event-card {
-    margin-top: 16px;
-  }
-
-
-  /* Date */
-
-  .events-section .event-date {
+  .event-card .event-date {
     margin-bottom: 13px;
 
     font-size: 10px;
@@ -1360,28 +1577,19 @@ img {
     letter-spacing: 0.13em;
   }
 
-
-  /* Title */
-
-  .events-section .event-card h3 {
+  .event-card h3 {
     font-size: 39px;
 
     line-height: 1.03;
   }
 
-
-  /* Time */
-
-  .events-section .event-time {
+  .event-card .event-time {
     margin: 13px 0 11px;
 
     font-size: 14px;
   }
 
-
-  /* Location */
-
-  .events-section .event-venue {
+  .event-card .event-venue {
     max-width: 320px;
 
     font-size: 17px;
@@ -1389,10 +1597,7 @@ img {
     line-height: 1.4;
   }
 
-
-  /* Marriage */
-
-  .events-section .wedding-card {
+  .wedding-card {
     margin-top: 22px;
 
     margin-bottom: 22px;
@@ -1402,17 +1607,17 @@ img {
     padding-bottom: 43px;
   }
 
-  .events-section .wedding-card h3 {
+  .wedding-card h3 {
     font-size: 44px;
   }
 
 
-  /* =======================================================
-     THANK YOU
-  ======================================================= */
+  /* THANK YOU / IMAGE 2 */
 
   .thank-you-section {
     padding: 90px 20px 105px;
+
+    background-position: center center;
   }
 
   .thank-you-section .section-eyebrow {
@@ -1471,7 +1676,7 @@ img {
   }
 
 
-  /* Hero - unchanged */
+  /* HERO - UNCHANGED */
 
   .hero-section {
     height: 700px;
@@ -1522,7 +1727,7 @@ img {
   }
 
 
-  /* Countdown */
+  /* COUNTDOWN */
 
   .countdown-section {
     padding-top: 58px;
@@ -1543,49 +1748,70 @@ img {
   }
 
 
-  /* Events */
+  /* IMAGE 1 EVENTS */
 
-  .events-section {
-    padding-top: 55px;
-
-    padding-bottom: 60px;
+  .pre-wedding-events {
+    background-position: center center;
   }
 
-  .events-section > h2 {
-    font-size: 43px;
+  .pre-wedding-event {
+    min-height: 260px;
+
+    padding: 48px 14px;
   }
 
-  .events-section .event-card {
+  .pre-wedding-event h3 {
+    font-size: 37px;
+  }
+
+  .pre-wedding-event .event-date {
+    font-size: 9px;
+  }
+
+  .pre-wedding-event .event-time {
+    font-size: 13px;
+  }
+
+  .pre-wedding-event .event-venue {
+    font-size: 16px;
+  }
+
+
+  /* EVENT CARDS */
+
+  .event-card {
     padding: 31px 15px;
   }
 
-  .events-section .event-date {
+  .event-card .event-date {
     font-size: 10px;
 
     letter-spacing: 0.1em;
   }
 
-  .events-section .event-card h3 {
+  .event-card h3 {
     font-size: 35px;
   }
 
-  .events-section .event-venue {
+  .event-card .event-venue {
     font-size: 16px;
   }
 
-  .events-section .wedding-card {
+  .wedding-card {
     padding-top: 39px;
 
     padding-bottom: 39px;
   }
 
 
-  /* Thank you */
+  /* THANK YOU */
 
   .thank-you-section {
     padding-top: 80px;
 
     padding-bottom: 90px;
+
+    background-position: center center;
   }
 
   .thank-you-section h2 {
@@ -1619,495 +1845,5 @@ img {
     margin-top: 10px;
 
     font-size: 14px;
-  }
-}
-
-
-/* =========================================================
-   NATURAL WEDDING INVITATION FLOW
-   HERO IS NOT TOUCHED
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   COUNTDOWN
-   --------------------------------------------------------- */
-
-.countdown-section {
-  min-height: auto !important;
-  height: auto !important;
-
-  padding-top: 110px !important;
-  padding-bottom: 90px !important;
-
-  display: block !important;
-}
-
-.countdown-container {
-  min-height: auto !important;
-  height: auto !important;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 24px !important;
-}
-
-.countdown-title {
-  margin-top: 22px !important;
-  margin-bottom: 25px !important;
-}
-
-.countdown-section .gold-divider {
-  margin: 0 auto 45px !important;
-}
-
-.countdown-grid {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-
-/* ---------------------------------------------------------
-   WEDDING CELEBRATIONS HEADING
-   --------------------------------------------------------- */
-
-.events-section,
-.wedding-events-section,
-.celebrations-section {
-  min-height: auto !important;
-  height: auto !important;
-
-  padding-top: 90px !important;
-  padding-bottom: 60px !important;
-}
-
-
-/* Any container around the event list */
-
-.events-container,
-.wedding-events-container,
-.celebrations-container {
-  min-height: auto !important;
-  height: auto !important;
-
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-
-/* ---------------------------------------------------------
-   EVENT CARDS
-   --------------------------------------------------------- */
-
-.event-section {
-  min-height: auto !important;
-  height: auto !important;
-
-  padding-top: 55px !important;
-  padding-bottom: 55px !important;
-
-  margin: 0 !important;
-
-  display: block !important;
-}
-
-
-/* Remove the decorative circle if it is creating
-   unnecessary visual/vertical space */
-
-.event-section .decorative-circle {
-  display: none !important;
-}
-
-
-.event-content {
-  width: min(88%, 560px);
-  margin: 0 auto !important;
-
-  min-height: auto !important;
-  height: auto !important;
-
-  padding: 42px 32px !important;
-
-  box-sizing: border-box;
-}
-
-
-/* ---------------------------------------------------------
-   EVENT TEXT ALIGNMENT
-   --------------------------------------------------------- */
-
-.event-subtitle {
-  margin-bottom: 18px !important;
-}
-
-
-.event-date {
-  margin: 0 0 18px !important;
-
-  text-align: center;
-}
-
-
-.event-title {
-  margin: 0 !important;
-
-  text-align: center;
-}
-
-
-.event-content .gold-divider {
-  margin: 25px auto 28px !important;
-}
-
-
-.event-time {
-  margin: 0 0 20px !important;
-
-  text-align: center;
-}
-
-
-.event-venue {
-  margin: 0 auto 10px !important;
-
-  text-align: center;
-
-  line-height: 1.45;
-}
-
-
-.event-address {
-  margin: 0 auto !important;
-
-  text-align: center;
-
-  line-height: 1.6;
-}
-
-
-/* ---------------------------------------------------------
-   LOCATION BUTTON
-   --------------------------------------------------------- */
-
-.location-button {
-  display: inline-flex;
-
-  margin-top: 22px;
-
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* ---------------------------------------------------------
-   NORMAL EVENT SPACING
-   --------------------------------------------------------- */
-
-.event-section + .event-section {
-  padding-top: 20px !important;
-}
-
-
-/* ---------------------------------------------------------
-   MARRIAGE — SPECIAL / LARGER
-   --------------------------------------------------------- */
-
-.marriage-event {
-  padding-top: 45px !important;
-  padding-bottom: 70px !important;
-}
-
-
-.marriage-event .event-content {
-  padding-top: 65px !important;
-  padding-bottom: 65px !important;
-}
-
-
-.marriage-event .event-title {
-  font-size: clamp(48px, 8vw, 78px);
-}
-
-
-.marriage-event .event-time {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-
-/* ---------------------------------------------------------
-   FINAL / THANK YOU
-   --------------------------------------------------------- */
-
-.final-section {
-  min-height: auto !important;
-  height: auto !important;
-
-  padding-top: 150px !important;
-  padding-bottom: 170px !important;
-
-  display: block !important;
-}
-
-
-.final-content {
-  min-height: auto !important;
-  height: auto !important;
-
-  width: min(90%, 650px);
-
-  margin: 0 auto !important;
-
-  padding: 0 24px !important;
-
-  box-sizing: border-box;
-
-  text-align: center;
-}
-
-
-.final-content h2 {
-  margin-top: 24px !important;
-  margin-bottom: 35px !important;
-}
-
-
-.final-message {
-  max-width: 520px;
-
-  margin: 0 auto 30px !important;
-
-  line-height: 1.8;
-}
-
-
-.final-names {
-  margin-top: 28px !important;
-}
-
-
-.final-heart {
-  margin-top: 35px;
-
-  font-size: 28px;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-  .countdown-section {
-    padding-top: 80px !important;
-    padding-bottom: 65px !important;
-  }
-
-
-  .countdown-container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-
-  .countdown-title {
-    margin-top: 18px !important;
-    margin-bottom: 20px !important;
-  }
-
-
-  .countdown-section .gold-divider {
-    margin-bottom: 35px !important;
-  }
-
-
-  .countdown-grid {
-    width: 100%;
-
-    gap: 15px !important;
-  }
-
-
-  .countdown-number {
-    font-size: clamp(34px, 9vw, 52px);
-  }
-
-
-  .countdown-label {
-    font-size: 10px;
-  }
-
-
-  .events-section,
-  .wedding-events-section,
-  .celebrations-section {
-    padding-top: 65px !important;
-    padding-bottom: 40px !important;
-  }
-
-
-  .event-section {
-    padding-top: 35px !important;
-    padding-bottom: 35px !important;
-  }
-
-
-  .event-section + .event-section {
-    padding-top: 12px !important;
-  }
-
-
-  .event-content {
-    width: calc(100% - 32px);
-
-    padding: 32px 22px !important;
-  }
-
-
-  .event-date {
-    font-size: 14px;
-    letter-spacing: 3px;
-  }
-
-
-  .event-title {
-    font-size: clamp(36px, 10vw, 55px);
-    line-height: 1.05;
-  }
-
-
-  .event-time {
-    font-size: 17px;
-  }
-
-
-  .event-venue {
-    font-size: 19px;
-  }
-
-
-  .event-address {
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-
-  /* Marriage */
-
-  .marriage-event {
-    padding-top: 35px !important;
-    padding-bottom: 55px !important;
-  }
-
-
-  .marriage-event .event-content {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-  }
-
-
-  .marriage-event .event-title {
-    font-size: clamp(45px, 13vw, 68px);
-  }
-
-
-  /* Thank You */
-
-  .final-section {
-    padding-top: 110px !important;
-    padding-bottom: 130px !important;
-  }
-
-
-  .final-content {
-    width: 100%;
-
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-  }
-
-
-  .final-content h2 {
-    font-size: clamp(48px, 13vw, 72px);
-
-    line-height: 1.02;
-
-    margin-bottom: 30px !important;
-  }
-
-
-  .final-message {
-    font-size: 17px;
-
-    line-height: 1.7;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  .countdown-section {
-    padding-top: 65px !important;
-    padding-bottom: 55px !important;
-  }
-
-
-  .countdown-grid {
-    gap: 8px !important;
-  }
-
-
-  .countdown-number {
-    font-size: 32px;
-  }
-
-
-  .countdown-label {
-    font-size: 9px;
-    letter-spacing: 1px;
-  }
-
-
-  .event-content {
-    width: calc(100% - 24px);
-
-    padding: 28px 18px !important;
-  }
-
-
-  .event-section {
-    padding-top: 28px !important;
-    padding-bottom: 28px !important;
-  }
-
-
-  .event-section + .event-section {
-    padding-top: 8px !important;
-  }
-
-
-  .event-title {
-    font-size: 40px;
-  }
-
-
-  .marriage-event .event-content {
-    padding-top: 38px !important;
-    padding-bottom: 38px !important;
-  }
-
-
-  .final-section {
-    padding-top: 90px !important;
-    padding-bottom: 110px !important;
   }
 }
