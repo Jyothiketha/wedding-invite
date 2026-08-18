@@ -2623,3 +2623,10 @@ img {
 }
 
 
+/* =========================================================
+   REMOVE RECEPTION SECTION
+========================================================= */
+
+.events-section .event-card:last-of-type {
+  display: none !important;
+}
