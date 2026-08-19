@@ -277,7 +277,7 @@ function App() {
 
         {/* =================================================
             IMAGE 1
-            GROOM MAKEOVER → SANGEETH → BONALU & LUNCH
+            GROOM MAKEOVER → SANGEETH → BOONAM & LUNCH
         ================================================= */}
 
         <div className="pre-wedding-events">
@@ -337,7 +337,7 @@ function App() {
           </div>
 
 
-          {/* BONALU & LUNCH */}
+          {/* BOONAM & LUNCH */}
 
           <div className="pre-wedding-event">
 
@@ -346,7 +346,7 @@ function App() {
             </p>
 
             <h3>
-              Bonalu &amp; Lunch
+              Boonam &amp; Lunch
             </h3>
 
             <p className="event-time">

@@ -2630,3 +2630,64 @@ img {
 .events-section .event-card:last-of-type {
   display: none !important;
 }
+
+
+/* =========================================================
+   MARRIAGE SECTION - LIGHT CREAM BACKGROUND
+   ========================================================= */
+
+.marriage-section {
+  background: #f8f3e9 !important;
+  background-image: none !important;
+  color: #3b2118 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove the brown background from the marriage card */
+.marriage-section .event-card,
+.marriage-section .event-block,
+.marriage-section .event-card-content {
+  background: #f8f3e9 !important;
+  background-image: none !important;
+  color: #3b2118 !important;
+}
+
+/* Marriage title */
+.marriage-section h1,
+.marriage-section h2,
+.marriage-section h3 {
+  color: #3b2118 !important;
+}
+
+/* Date */
+.marriage-section .event-date,
+.marriage-section .date {
+  color: #b87900 !important;
+}
+
+/* Time */
+.marriage-section .event-time,
+.marriage-section .time {
+  color: #3b2118 !important;
+}
+
+/* Location */
+.marriage-section .event-location,
+.marriage-section .location {
+  color: #3b2118 !important;
+}
+
+/* Remove any overlay/photo from Marriage */
+.marriage-section::before,
+.marriage-section::after {
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
+
+/* Keep Marriage content above everything */
+.marriage-section > * {
+  position: relative;
+  z-index: 2;
+}
